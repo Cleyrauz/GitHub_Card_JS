@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './components/Card';
 import Cardlist from './components/Cardlist';
+import FormContainer from './containers/FormContainer';
 
 let data = [
   {
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <div>
         <h1>GitHub card generator</h1>
+        <FormContainer />
        <Cardlist cards={data}/>
      </div>
     );

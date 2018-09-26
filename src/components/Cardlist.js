@@ -1,12 +1,19 @@
 import React from 'react';
 import Card from './Card.js';
 
-const CardList = (props) => {
+const Cardlist = (props) => {
+  const cl = props.cards.map(card => {
+    return <li key={card.id}>
+      <Card {...card}/>
+    </li>
+  });
+
   return (
-    <div>
-    <Card />
+    <div className="cardlist-container">
+    <ol className="card-list">{cl}
+    </ol>
     </div>
   );
 };
 
-export default CardList;
+export default Cardlist;
